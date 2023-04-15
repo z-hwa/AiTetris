@@ -1,5 +1,5 @@
 from settings import *
-from tetromio import Tetromino
+from tetromino import Tetromino
 import math
 
 class Tetris:
