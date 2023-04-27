@@ -5,6 +5,8 @@ vec = pg.math.Vector2 #二維class
 FPS = 60 #遊戲幀率
 FIELD_COLOR = (48, 39, 32) #背景顏色
 
+ANIM_TIME_INTERVAL = 150 #millitime
+
 TILE_SIZE = 40 #單個方塊的大小
 FIELD_SIZE = FIELD_W, FIELD_H = 10, 20 #整個遊戲區塊的單位大小
 FIELD_RES = FIELD_W * TILE_SIZE, FIELD_H * TILE_SIZE #計算實際的遊戲區塊面積 單位遊戲區塊*單個方塊大小

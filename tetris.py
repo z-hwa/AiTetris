@@ -22,7 +22,9 @@ class Tetris:
                 pg.draw.rect(self.app.screen, 'black',(x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE, TILE_SIZE), 1)
 
     def update(self):
-        self.tetromino.update() #呼叫tetromino的腳本 並執行其中的update
+        #動畫觸發是true 才繼續update
+        if self.app.anim_trigger:
+            self.tetromino.update() #呼叫tetromino的腳本 並執行其中的update
         self.sprite_group.update()
 
     def draw(self):

@@ -35,5 +35,6 @@ class Tetromino:
 
     def update(self):
         self.move(direction = 'down') #向下移動
-        pg.time.wait(200) #每200單位時間 向下移動一次
+        #set_timer取代了這個功能
+        #pg.time.wait(200) #每200單位時間 向下移動一次
         
