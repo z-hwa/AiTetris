@@ -9,7 +9,7 @@ TILE_SIZE = 40 #單個方塊的大小
 FIELD_SIZE = FIELD_W, FIELD_H = 10, 20 #整個遊戲區塊的單位大小
 FIELD_RES = FIELD_W * TILE_SIZE, FIELD_H * TILE_SIZE #計算實際的遊戲區塊面積 單位遊戲區塊*單個方塊大小
 
-INIT_POS_OFFSET = vec(FIELD_SIZE) // 2 #(5, 10) 預設的pos 畫面中心
+INIT_POS_OFFSET = vec(FIELD_W // 2 - 1, 0)  #預設的pos 根據寬度隨機生成
 MOVE_DIRECTIONS = {'left': vec(-1, 0), 'right': vec(1, 0), 'down': vec(0, 1)} #移動方向
 
 #各種形狀的俄羅斯方塊
