@@ -4,9 +4,16 @@ import math
 
 class Tetris:
     def __init__(self, app):
-        self.app = app
-        self.sprite_group = pg.sprite.Group()
-        self.tetromino = Tetromino(self)
+        self.app = app #將self 的 app 設為傳入的app
+        self.sprite_group = pg.sprite.Group() #將self 的 物件群組設為ps的物件群組
+        self.tetromino = Tetromino(self) #將self的tetromino設定為腳本tetromino
+
+    #可以操控方塊的左右移動
+    def control(self, pressed_key):
+        if pressed_key == pg.K_LEFT:
+            self.tetromino.move(direction='left')
+        elif pressed_key == pg.K_RIGHT:
+            self.tetromino.move(direction='right')
 
     def draw_grid(self):
         #畫出背景格線
@@ -15,7 +22,7 @@ class Tetris:
                 pg.draw.rect(self.app.screen, 'black',(x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE, TILE_SIZE), 1)
 
     def update(self):
-        self.tetromino.update()
+        self.tetromino.update() #呼叫tetromino的腳本 並執行其中的update
         self.sprite_group.update()
 
     def draw(self):

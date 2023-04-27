@@ -26,6 +26,10 @@ class App:
             if event.type == pg.QUIT or (event.type == pg.KEYDOWN and event.key == pg.K_ESCAPE):
                 pg.quit()
                 sys.exit()
+            elif event.type == pg.KEYDOWN:
+                #將得到的輸入鍵 傳到tetris的control中
+                self.tetris.control(pressed_key=event.key)
+                
 
     def run(self):
         while True:
